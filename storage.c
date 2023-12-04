@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void loadData(struct Patient *patient, struct HealthMeasurement *measurement) {
-    FILE *file = fopen("data.csv", "r");
+    FILE *file = fopen("data.txt", "r");
     
     if (file != NULL) {
         /*Read patient data*/
@@ -21,7 +21,7 @@ void loadData(struct Patient *patient, struct HealthMeasurement *measurement) {
 }
 
 void saveData(const struct Patient *patient, const struct HealthMeasurement *measurement) {
-    FILE *file = fopen("data.csv", "w");
+    FILE *file = fopen("data.txt", "w");
 
     if (file != NULL) {
         /*Write patient data*/
