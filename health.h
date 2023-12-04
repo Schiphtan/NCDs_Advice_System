@@ -13,7 +13,5 @@ struct HealthMeasurement {
 };
 
 void inputHealthData(struct Patient *patient, struct HealthMeasurement *measurement);
-void analyzeHealthData(struct HealthMeasurement *measurement);
-void generateAdvice(struct HealthMeasurement *measurement);
 
 #endif

@@ -16,6 +16,7 @@ struct Patient
 };
 
 void registerPatient(struct Patient *patient);
+void generatePatientID(struct Patient *patient);
 int loginPatient(struct Patient *patient);
 
 #endif

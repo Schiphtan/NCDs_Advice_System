@@ -26,10 +26,10 @@ void registerPatient(struct Patient *patient)
     printf("Enter patient disease: ");
     scanf("%s", patient->disease);
 
-    printf("Enter patient weight: ");
+    printf("Enter patient weight in Kgs: ");
     scanf("%f", &patient->weight);
 
-    printf("Enter patient height: ");
+    printf("Enter patient height in cm: ");
     scanf("%f", &patient->height);
 
     printf("Enter patient sex (M/F): ");
@@ -45,7 +45,7 @@ void registerPatient(struct Patient *patient)
 
     /*Ask the patient to set a password*/
 
-    printf("Set a password: ");
+    printf("Create a password: ");
     scanf("%s", patient->password);
 
     printf("Hello %s!\nYou have been registered successfully!\n", patient->firstName);
