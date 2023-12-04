@@ -8,11 +8,12 @@
 
 void displayMainMenu()
 {
-    printf("Welcome to NCDs Management system!\n");
-    printf("1. To Create account \"Enter 1\"\n");
-    printf("2. Login \"Enter 2\"\n");
-    printf("3. To Print the stored data Enter 3\n");
-    printf("4. To exit the program \"Enter0\"\n");
+    printf("Welcome to NCDs Adviser system!\n");
+    printf("=================================\n\n\n");
+    printf("1. To Create account\n\n");
+    printf("2. To Login\n\n");
+    printf("3. To Print the stored data\n\n");
+    printf("0. To exit the program\n\n");
 }
 
 int handleUserInput(struct Patient *patient, struct HealthMeasurement *measurement) {

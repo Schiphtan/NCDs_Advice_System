@@ -6,10 +6,11 @@ void inputHealthData(struct Patient *patient, struct HealthMeasurement *measurem
 {
     int choice;
     printf("To know interpretation of your measurements:\n");
-    printf("1.BMI Enter 1\n");
-    printf("2.Diabetes Enter 2\n");
-    printf("3.Heart rate Enter 3\n");
-    printf("4.To Exit Enter 0\n");
+    printf("---------------------------------------------\n");
+    printf("1. BMI\n");
+    printf("2. Diabetes\n");
+    printf("3. Heart rate\n");
+    printf("0. To Exit\n");
     scanf("%d", &choice);
 
     switch (choice)
