@@ -40,18 +40,19 @@ void inputHealthData(struct Patient *patient, struct HealthMeasurement *measurem
         }
 
         /*Implementation for generating advice*/
-        printf("Advice based your BMI:\n");
-
+        printf("Advice based on your BMI:\n");
+        printf("-----------------------------\n\n");
         if (measurement->bmi < 18.5) {
-            printf("You are underweight. Consider gaining weight through a balanced diet and regular exercise.\n\n\n");
+            printf("You are underweight.\nConsider gaining weight through a balanced diet and regular exercise.\n\n\n");
         } else if (measurement->bmi >= 18.5 && measurement->bmi < 25) {
-            printf("Your weight is normal. Maintain a balanced diet and regular exercise for overall health.\n\n\n");
+            printf("Your weight is normal.\nMaintain a balanced diet and regular exercise for overall health.\n\n\n");
         } else if (measurement->bmi >= 25 && measurement->bmi < 30) {
-            printf("You are overweight. Consider losing weight through a balanced diet and regular exercise to improve health.\n\n\n");
+            printf("You are overweight.\nConsider losing weight through a balanced diet and regular exercise to improve health.\n\n\n");
         } else {
-            printf("You are obese. Consult with a healthcare professional for guidance on weight management and overall health.\n\n\n");
+            printf("You are obese.\nConsult with a healthcare professional for guidance on weight management and overall health.\n\n\n");
         }
-        
+
+        inputHealthData(patient, measurement);
         break;
 
     case 2:
@@ -70,17 +71,20 @@ void inputHealthData(struct Patient *patient, struct HealthMeasurement *measurem
         }
 
         /*Advise based on Blood Sugar*/
-        printf("Advice based on Blood Sugar:\n");
+        printf("Advice based on your Blood Sugar level:\n");
+        printf("----------------------------------------\n\n");
 
         if (measurement->bloodSugar < 70) {
-            printf("Your blood sugar is low. Consume some carbohydrates to raise your blood sugar level.\n\n\n");
+            printf("Your blood sugar is low.\nConsume some carbohydrates to raise your blood sugar level.\n\n\n");
         } else if (measurement->bloodSugar >= 70 && measurement->bloodSugar <= 99) {
-            printf("Your blood sugar is normal. Maintain a balanced diet to keep it within this range.\n\n\n");
+            printf("Your blood sugar is normal.\nMaintain a balanced diet to keep it within this range.\n\n\n");
         } else if (measurement->bloodSugar >= 100 && measurement->bloodSugar <= 125) {
             printf("Your blood sugar is in the prediabetes range.\nFocus on a healthier lifestyle, including diet and exercise, to prevent diabetes.\n\n\n");
         } else {
-            printf("Your blood sugar is high. Consult with a healthcare professional for further evaluation and guidance.\n\n\n");
+            printf("Your blood sugar is high.\nConsult with a healthcare professional for further evaluation and guidance.\n\n\n");
         }
+
+        inputHealthData(patient, measurement);
         break;
 
     case 3:
@@ -103,19 +107,22 @@ void inputHealthData(struct Patient *patient, struct HealthMeasurement *measurem
         }
 
         /*Advise based on Blood Pressure*/
-        printf("Advice based on Blood Pressure:\n");
+        printf("Advice based on your Heart rate:\n");
+        printf("---------------------------------\n\n");
 
         if (measurement->bloodPressure < 90) {
-            printf("Your blood pressure is low. Consider consulting with a healthcare professional for further evaluation.\n\n\n");
+            printf("Your blood pressure is low.\nConsider consulting with a healthcare professional for further evaluation.\n\n\n");
         } else if (measurement->bloodPressure >= 90 && measurement->bloodPressure < 120) {
-            printf("Your blood pressure is normal. Maintain a healthy lifestyle to keep it within this range.\n\n\n");
+            printf("Your blood pressure is normal.\nMaintain a healthy lifestyle to keep it within this range.\n\n\n");
         } else if (measurement->bloodPressure >= 120 && measurement->bloodPressure < 130) {
-            printf("Your blood pressure is elevated. Focus on lifestyle changes,\nincluding diet and exercise, to prevent hypertension.\n\n\n");
+            printf("Your blood pressure is elevated.\nFocus on lifestyle changes,\nincluding diet and exercise, to prevent hypertension.\n\n\n");
         } else if (measurement->bloodPressure >= 130 && measurement->bloodPressure < 140) {
-            printf("You have stage 1 hypertension. Consult with a healthcare professional for further evaluation and guidance.\n\n\n");
+            printf("You have stage 1 hypertension.\nConsult with a healthcare professional for further evaluation and guidance.\n\n\n");
         } else {
-            printf("You have stage 2 hypertension. Urgently consult with a healthcare professional for evaluation and treatment.\n\n\n");
+            printf("You have stage 2 hypertension.\nUrgently consult with a healthcare professional for evaluation and treatment.\n\n\n");
         }
+
+        inputHealthData(patient, measurement);
 
         break;
 

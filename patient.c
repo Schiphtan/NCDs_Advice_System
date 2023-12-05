@@ -66,7 +66,8 @@ int loginPatient(struct Patient *Patient)
     {
         printf("Invalid username\n");
         printf("Login unsuccessful\n");
-
+        loginPatient(Patient);
+        
         return 0;
     }
 
@@ -78,6 +79,7 @@ int loginPatient(struct Patient *Patient)
     {
         printf("Invalid password\n");
         printf("Login unsuccessful\n");
+        loginPatient(Patient);
 
         return 0;
     }
